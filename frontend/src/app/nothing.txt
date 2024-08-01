@@ -50,3 +50,6 @@
           </p>
         </a>
       </div>
+
+
+      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.9);

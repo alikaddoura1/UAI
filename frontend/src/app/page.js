@@ -3,23 +3,18 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useState } from "react";
+import axios from 'axios';
 
 function SignUp() {
 
   const [email, setEmail] = useState("jonaddam@gmail.com")
   const [password, setPassword] = useState("")
 
-  const handleSignup = (e) =>{
+  const handleSignup = async (e) =>{
     e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
-    
-    /*
-    ill do this later lol
-    */
-    
+ 
   }
-
+  
   return (
     <div className={styles.signupContainer}>
     <form className={styles.signupForm} onSubmit={handleSignup}>
@@ -55,12 +50,48 @@ export default function Landing() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <h1 className = {styles.title}>
-          Welcome to UAI
+        <h1>
+          ...
         </h1>
+        <h2 className = {styles.title}>
+          Welcome to UAI
+        </h2>
+   
       </div>
-        <SignUp> </SignUp>
-        <p>Already have an account? Login</p>
+      <SignUp> </SignUp>
+
+      <div className={styles.grid}>
+        
+        <a></a>
+       
+
+        <a
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          className={styles.card}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2>
+            Learn <span>-&gt;</span>
+          </h2>
+          <p>Learn about UAI and its application and uses!</p>
+        </a>
+
+        <a
+          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          className={styles.card}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2>
+            Login <span>-&gt;</span>
+          </h2>
+          <p>Already have an account?</p>
+        </a>
+
+       
+      </div>
+        
     </main>
   );
 }
